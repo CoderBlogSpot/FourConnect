@@ -1,0 +1,82 @@
+======= NOTES =========
+
+Description:
+============
+
+// Players take turns dropping colored discs from the top into a vertically suspended grid. The goal is to 
+connect 4 of one's own discs in a row, either horizontally, vertically or diagonally before the opponent.
+
+========= STEPS =============
+1. plan the game logic.
+  - Outline the game logic and rules.
+
+2. Initialize the game board.
+  - Create 2d list to represent the game board. Initialize it with empty spaces to represent unoccupied positions.
+
+3. Display the game board.
+  -  write a function to display the curren state of the game board and will be called after each move.
+
+4. Check for a winner.
+  - write function to check for a winner after each move and for 4 consecutive discs in a row horizontally, vertically or diagonally.
+
+5. Check for a draw.
+  - write function to check if the game board is full, indicating a draw.
+
+6. Handle player turns.
+  - Implement the main game loop where players take turns. Prompt the current player to choose a column to drop their disc.
+
+7. Update the game board.
+  - Update the game board with the player's move, and then check for a winner or draw.
+
+8. Repeat or end the game.
+  - After each move, check if the game should continue or end. If there's a winner or a draw, display the result and end the game.
+
+9. User Input validation.
+  - Validate user input to ensure it's within the valid range of columns and that the selected column is not already full.
+
+10. Create a playable game.
+  - Bring all the components together to create a playable Connect Four game. Test the game thoroughly to ensure it works as expected.
+
+11. Enhancements (Optional).
+  - Consider adding features like input validation, a graphical interface using a library like Pygame, or additional game modes.
+
+
+Basic Plan for the Game Logic:
+==============================
+
+1. Game Board:
+  * set up a grid/board with a fixed number of rows and cols (typically 6x7)
+  * Each cell of the grid can be empty or filled with a player's disc (usually denoted as "X" or "O")
+
+2. Player Turn's:
+  * Keep track of the current player's turn (Player 1 or Player 2)
+  * Allow players to take turns to drop their discs into any column of the grid.
+
+3. Dropping discs:
+  * When a player chooses a column to drop a disc:
+    - Check for the lowest available empty slot in that column.
+    - Place the player's disc in the lowest empty slot of the selected column.
+    - If the column is full, the move is invalid, and the player must choose another column.
+
+4. Winning Condition:
+  * After each move, check for a winning condition.
+  * Check for four consecutive discs in a row horizontally, vertically, or diagonally.
+  * If a winning condition is met, declare the current player as the winner and end the game.
+
+5. Draw Condition:
+  * If the board is completely filled, and no player has won, declare the game as a draw.
+
+6. Switch Turns:
+  * After each valid move, switch to the next player's turn.
+
+7. Display Board:
+  * Display current state of the board after each move, so players can see the progress of the game.
+
+8. User Input:
+  * Allow players to input their moves using a user-friendly interface (e.g. selecting a col number).
+
+9. Game Loop:
+  * Implement a loop that continues until player wins or the game ends in a draw.
+
+10. Additional Features (Optional):
+  *  Implement features like undoing moves, resetting the game, or allowing players to start a new game.
